@@ -1,0 +1,28 @@
+import wollok.game.*
+import personaje.*
+import objetos.*
+import niveles.*
+
+program loJueito {
+
+	game.title("aJuáLoJueito")
+	game.height(10)
+	game.width(10)
+	
+	game.ground("ground.png")
+	nivel1.configurarNivel()
+	
+	//configuro el teclado
+	//keyboard.up().onPressDo({kratos.moveUp()})
+	//keyboard.down().onPressDo({kratos.moveDown()})
+	//keyboard.left().onPressDo({kratos.moveLeft()})
+	//keyboard.right().onPressDo({kratos.moveRight()})
+	//agregar caja con tecla a
+	//keyboard.a().onPressDo({game.addVisual(new Caja())})
+	//mostrar energia
+	
+	keyboard.space().onPressDo({kratos.decirEnergiaYPasos()})
+	
+	game.start()
+	
+}
